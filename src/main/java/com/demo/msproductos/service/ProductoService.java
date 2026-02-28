@@ -14,7 +14,6 @@ public class ProductoService {
 
     private final AtomicLong idCounter = new AtomicLong(6);
 
-    // ✅ Datos ficticios precargados para la demo
     private final List<Producto> productos = new ArrayList<>(Arrays.asList(
             Producto.builder().id(1L).nombre("Laptop Dell XPS 15").descripcion("Laptop de alta gama con procesador Intel Core i7")
                     .precio(1500.00).stock(10).categoria("Electrónica").activo(true).build(),
@@ -29,7 +28,9 @@ public class ProductoService {
                     .precio(130.00).stock(30).categoria("Periféricos").activo(true).build(),
 
             Producto.builder().id(5L).nombre("Auriculares Sony WH-1000XM5").descripcion("Auriculares inalámbricos con cancelación de ruido")
-                    .precio(350.00).stock(20).categoria("Audio").activo(false).build()
+                    .precio(350.00).stock(20).categoria("Audio").activo(false).build(),
+            Producto.builder().id(6L).nombre("Microfono Teraware TW-001").descripcion("Microfono de mesa con controles")
+                    .precio(350.00).stock(20).categoria("Periféricos").activo(false).build()
     ));
 
     public List<Producto> listar() {
